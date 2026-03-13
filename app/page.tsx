@@ -1,13 +1,12 @@
-import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
-  const features = [
-    { title: "Fast Performance", desc: "Built with Next.js 15 for blazing fast speed.", icon: "⚡" },
-    { title: "Modern Design", desc: "Beautifully crafted with Tailwind CSS.", icon: "💎" },
-    { title: "SEO Ready", desc: "Optimized for search engines out of the box.", icon: "🔍" }
-  ];
+const features = [
+  { title: "Fast Performance", desc: "Built with Next.js 16 for blazing fast speed.", icon: "⚡" },
+  { title: "Modern Design", desc: "Beautifully crafted with Tailwind CSS.", icon: "💎" },
+  { title: "SEO Ready", desc: "Optimized for search engines out of the box.", icon: "🔍" }
+];
 
+export default function Home() {
   return (
     <div className="bg-white dark:bg-black transition-colors duration-500">
       {/* Hero Section */}
