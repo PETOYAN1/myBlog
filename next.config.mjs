@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: '/myblog',
   output: 'export',
   images: {
     unoptimized: true,
