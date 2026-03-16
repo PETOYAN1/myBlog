@@ -29,7 +29,7 @@ export default async function Post({ params }) {
                     <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight sm:text-6xl mb-6 transition-colors duration-500">
                         {post.title}
                     </h1>
-                    <div className="flex items-center p-6 bg-gray-50 dark:bg-gray-900/50 rounded-2xl transition-colors duration-500">
+                    <div className="flex items-center p-6 bg-white dark:bg-black border border-gray-100 dark:border-gray-800 rounded-2xl transition-colors duration-500">
                         <div className="flex-shrink-0">
                             <div className="h-14 w-14 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold text-xl shadow-lg">
                                 {post.title.charAt(0)}
@@ -55,10 +55,10 @@ export default async function Post({ params }) {
                 <footer className="mt-16 pt-10 border-t border-gray-100 dark:border-gray-800 transition-colors duration-500">
                     <h3 className="text-sm font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4 transition-colors duration-500">Tags</h3>
                     <div className="flex flex-wrap gap-3">
-                        {['Technology', 'Next.js', 'React', 'Design'].map(tag => (
-                            <span key={tag} className="px-4 py-2 rounded-xl text-sm font-bold bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 border border-blue-100 dark:border-blue-800 transition-colors duration-500">
+                        {post.tags.map(tag => (
+                            <Link href={`/blog/tags/${tag}`} key={tag} className="px-4 py-2 rounded-xl text-sm font-bold bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 border border-blue-100 dark:border-blue-800 transition-colors duration-500 hover:bg-blue-100 dark:hover:bg-blue-900">
                                 #{tag}
-                            </span>
+                            </Link>
                         ))}
                     </div>
                 </footer>
